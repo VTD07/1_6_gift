@@ -982,37 +982,48 @@ body {
     transform: scale(0);
   }
 }
-.close
-{
+.button {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   right: 32px;
   top: 32px;
-  width: 32px;
-  height: 32px;
-  opacity: 0.3;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: monospace;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #5f5d5f;
+  background: linear-gradient(to right, #686D76, #0c252d, #070b0c);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
 }
-.close:hover {
-  opacity: 1;
+
+.button svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
-.close:before, .close:after {
-  position: absolute;
-  left: 15px;
-  content: ' ';
-  height: 33px;
-  width: 2px;
-  background-color: #aba1a1;
+
+.button span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
-.close:before {
-  transform: rotate(45deg);
+
+.button:hover svg {
+  transform: translateX(5px) rotate(90deg);
 }
-.close:after {
-  transform: rotate(-45deg);
+
+.button:hover span {
+  transform: translateX(7px);
 }
 .typewriter
 {
-    display: none;
-    position: relative;
-    margin: 0;
+  display: none;
+  position: relative;
+  margin: auto;
 }
 .typewriter pre {
     color: #ccc;

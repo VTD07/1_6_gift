@@ -1,17 +1,18 @@
-var y=document.querySelector(".typewriter");
-var x=document.querySelector(".close");
-var z=document.querySelector(".contain");
+var count=0;
+var x=document.getElementById("flower");
 function myfunction()
 {
-  $(document).ready(function(){
-    $(".contain").fadeOut(1000);
-    $(".close").fadeOut(1000);
-  });
-}
-x.addEventListener("click",myfunction)
-if(z.style.display="none")
-{
-  $(document).ready(function(){
-    $(".typewriter").fadeIn(1000);
-  });
+  count++;
+  if(count%2!=0)
+  {
+    $(".contain").fadeOut(1000,function(){
+      $(".typewriter").fadeIn(1000);
+    });
+  }
+  else 
+  {
+    $(".typewriter").fadeOut(1000,function(){
+      $(".contain").fadeIn(1000);
+    });
+  }
 }
