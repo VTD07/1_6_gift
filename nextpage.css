@@ -1000,6 +1000,7 @@ body {
   border: none;
   letter-spacing: 0.05em;
   border-radius: 16px;
+  z-index: 100;
 }
 
 .button svg {
